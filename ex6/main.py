@@ -84,7 +84,7 @@ while hero.dead == False:
             inhabitant.talk()
 
     elif command == "fight":
-        if inhabitant is not None:
+        if isinstance(inhabitant, characters.Enemy):
             # Fight with the inhabitant, if there is one
             print("What will you fight with?")
             fight_with = input()
